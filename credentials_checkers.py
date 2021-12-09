@@ -23,9 +23,9 @@ def user_find(file):
 def pass_check(user_found):
     while True:
 
-        user = input("enter your password: ")
+        passw = input("enter your password: ")
         try:
-            if user_found[1] == user:
+            if user_found[1] == passw:
                 print("password match")
                 print('Logged in.')
                 break
@@ -34,4 +34,6 @@ def pass_check(user_found):
                 user_find(file_reader)
         except: 
             print('Processing error')
-main()
+            
+if __name__ == "__main__":
+    main()
